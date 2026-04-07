@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzz-Net — Смотри фильмы и сериалы онлайн</title>
+    <link rel="icon" type="image/jpeg" href="BuzzNet.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="BuzzNet.jpg" alt="Buzz-Net" class="logo-icon">
+                <span class="logo-text">Buzz<span class="logo-highlight">-Net</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Главная</a></li>
+                <li><a href="#features" class="nav-link">Возможности</a></li>
+                <li><a href="#content" class="nav-link">Каталог</a></li>
+                <li><a href="#about" class="nav-link">О нас</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+            </div>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#features">Возможности</a></li>
+            <li><a href="#content">Каталог</a></li>
+            <li><a href="#about">О нас</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content hero-content-full">
+            <div class="hero-badge">
+                <i class="fas fa-play"></i>
+                <span>Смотрите фильмы в HD качестве</span>
+            </div>
+            <h1 class="hero-title">
+                Добро пожаловать в
+                <span class="gradient-text">Buzz-Net</span>
+            </h1>
+            <p class="hero-subtitle">
+                Погрузитесь в мир кино и сериалов. Тысячи фильмов, сериалов и мультфильмов 
+                в одном месте. Смотрите онлайн без рекламы в HD качестве.
+            </p>
+            <div class="hero-actions">
+                <button class="btn-hero btn-hero-primary" id="btn-watch-now">
+                    <i class="fas fa-play"></i>
+                    Начать смотреть
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15000">0</span>
+                    <span class="stat-label">Фильмов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="2500">0</span>
+                    <span class="stat-label">Сериалов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1000000">0</span>
+                    <span class="stat-label">Зрителей</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Листайте вниз</span>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <span class="section-badge">Возможности</span>
+            <h2 class="section-title">Почему выбирают <span class="gradient-text">Buzz-Net</span></h2>
+            <p class="section-subtitle">Мы создали лучшую платформу для просмотра контента</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up">
+                <div class="feature-icon">
+                    <i class="fas fa-film"></i>
+                </div>
+                <h3>Огромный каталог</h3>
+                <p>Более 15 000 фильмов и 2 500 сериалов на любой вкус. Новинки каждую неделю.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon">
+                    <i class="fas fa-hd"></i>
+                </div>
+                <h3>HD качество</h3>
+                <p>Смотрите в Full HD и 4K без буферизации. Адаптивный стриминг для любого интернета.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>На любом устройстве</h3>
+                <p>Смотрите на телефоне, планшете, компьютере или Smart TV. Синхронизация просмотра.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <h3>Скачивание</h3>
+                <p>Загружайте фильмы и смотрите офлайн. Идеально для поездок и перелётов.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-icon">
+                    <i class="fas fa-ban"></i>
+                </div>
+                <h3>Без рекламы</h3>
+                <p>Никакой рекламы во время просмотра. Только вы и ваш любимый контент.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="feature-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Мультиязычность</h3>
+                <p>Субтитры и озвучка на 50+ языков. Оригинальная дорожка всегда доступна.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section id="content" class="content-section">
+        <div class="section-header">
+            <span class="section-badge">Каталог</span>
+            <h2 class="section-title">Популярное на <span class="gradient-text">Buzz-Net</span></h2>
+            <p class="section-subtitle">Самые просматриваемые фильмы и сериалы этой недели</p>
+        </div>
+        
+        <!-- Content Tabs -->
+        <div class="content-tabs">
+            <button class="tab-btn active" data-category="movie">
+                <i class="fas fa-film"></i> Фильмы
+            </button>
+            <button class="tab-btn" data-category="tv">
+                <i class="fas fa-tv"></i> Сериалы
+            </button>
+            <button class="tab-btn" data-category="top">
+                <i class="fas fa-trophy"></i> Топ
+            </button>
+        </div>
+
+        <!-- Movies Grid -->
+        <div class="content-grid" id="movies-grid">
+            <!-- Загружается через API -->
+            <div class="loading-spinner" id="loading-spinner">
+                <div class="spinner"></div>
+                <p>Загрузка фильмов...</p>
+            </div>
+        </div>
+
+        <div class="content-cta">
+            <button class="btn-gradient" id="load-more-btn">
+                Загрузить ещё
+                <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <span class="section-badge">О платформе</span>
+                <h2 class="section-title">Будущее кино уже <span class="gradient-text">здесь</span></h2>
+                <p class="about-description">
+                    Buzz-Net — это революционная платформа для просмотра фильмов и сериалов. 
+                    Мы используем передовые технологии стриминга, чтобы вы могли наслаждаться 
+                    любимым контентом без задержек и в лучшем качестве.
+                </p>
+                <ul class="about-features">
+                    <li><i class="fas fa-check-circle"></i> Поддержка 4K HDR</li>
+                    <li><i class="fas fa-check-circle"></i> Dolby Atmos звук</li>
+                    <li><i class="fas fa-check-circle"></i> Умные рекомендации</li>
+                    <li><i class="fas fa-check-circle"></i> Семейный доступ</li>
+                </ul>
+                <button class="btn-gradient btn-large" id="btn-start-watch">
+                    Начать смотреть
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="about-visual">
+                <div class="device-mockup">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <div class="player-ui">
+                                <div class="player-controls">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="BuzzNet.jpg" alt="Buzz-Net" class="logo-icon">
+                    <span class="logo-text">Buzz<span class="logo-highlight">-Net</span></span>
+                </a>
+                <p>Лучший способ смотреть фильмы и сериалы онлайн</p>
+                <div class="social-links">
+                    <a href="https://t.me/pianievoda" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="https://vk.com/kakovohuyia" target="_blank" title="VK"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Навигация</h4>
+                    <a href="#home">Главная</a>
+                    <a href="#content">Фильмы</a>
+                    <a href="#content">Сериалы</a>
+                    <a href="#content">Аниме</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Жанры</h4>
+                    <a href="#content">Боевики</a>
+                    <a href="#content">Комедии</a>
+                    <a href="#content">Драмы</a>
+                    <a href="#content">Ужасы</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <a href="https://t.me/kakovohuyia" target="_blank">Telegram 1</a>
+                    <a href="https://t.me/pianievoda" target="_blank">Telegram 2</a>
+                    <a href="https://vk.com/kakovohuyia" target="_blank">VK</a>
+                    <a href="#">Политика</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Buzz-Net. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Search Modal -->
+    <div class="search-modal">
+        <div class="search-modal-content">
+            <button class="close-search"><i class="fas fa-times"></i></button>
+            <div class="search-input-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Поиск фильмов, сериалов...">
+            </div>
+            <div class="search-results">
+                <div class="search-result-item">
+                    <img src="https://images.unsplash.com/photo-1534809027769-b00d750a6a5c?w=100&h=150&fit=crop" alt="">
+                    <div class="result-info">
+                        <h4>Интерстеллар</h4>
+                        <span>Фильм • 2014</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div class="player-modal" id="player-modal">
+        <div class="player-container">
+            <button class="close-player"><i class="fas fa-times"></i></button>
+            
+            <div class="video-wrapper">
+                <video id="video-player" controls>
+                    Ваш браузер не поддерживает HTML5 видео
+                </video>
+            </div>
+            
+            <div class="player-info">
+                <div class="player-title" id="player-title">Загрузка...</div>
+                <div class="player-stats" id="player-stats">
+                    <span class="stat"><i class="fas fa-download"></i> <span id="download-speed">0 KB/s</span></span>
+                    <span class="stat"><i class="fas fa-upload"></i> <span id="upload-speed">0 KB/s</span></span>
+                    <span class="stat"><i class="fas fa-users"></i> <span id="peers-count">0</span> пиров</span>
+                    <span class="stat"><i class="fas fa-percentage"></i> <span id="progress">0%</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WebTorrent -->
+    <script src="https://cdn.jsdelivr.net/npm/webtorrent@latest/webtorrent.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
