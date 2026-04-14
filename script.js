@@ -12,29 +12,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Анимация при скролле
+// Анимация при скролле - Intersection Observer
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.15,
+    rootMargin: '0px 0px -80px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('visible');
         }
     });
 }, observerOptions);
 
-// Применяем анимацию к элементам
+// Применяем анимацию к элементам при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.feature-card, .screenshot-item');
     
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    animatedElements.forEach((el, index) => {
+        el.style.transitionDelay = `${index * 0.1}s`;
         observer.observe(el);
     });
 });
@@ -43,26 +40,53 @@ document.addEventListener('DOMContentLoaded', () => {
 const downloadBtn = document.getElementById('downloadBtn');
 if (downloadBtn) {
     downloadBtn.addEventListener('click', function(e) {
-        // Отслеживание события скачивания (можно подключить Google Analytics)
         console.log('Скачивание APK началось...');
-        
-        // Можно добавить дополнительную логику здесь
-        // Например, отправка события в аналитику
     });
 }
 
-// Параллакс эффект для hero секции
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
+// Создание частиц на фоне
+function createParticles() {
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'particles';
+    document.body.appendChild(particlesContainer);
+    
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        const size = Math.random() * 8 + 4;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.animationDelay = `${Math.random() * 20}s`;
+        particle.style.animationDuration = `${Math.random() * 10 + 15}s`;
+        
+        particlesContainer.appendChild(particle);
     }
+}
+
+// Запускаем создание частиц
+document.addEventListener('DOMContentLoaded', createParticles);
+
+// Parallax эффект для мыши
+document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX / window.innerWidth - 0.5;
+    const mouseY = e.clientY / window.innerHeight - 0.5;
+    
+    const particles = document.querySelectorAll('.particle');
+    particles.forEach((particle, index) => {
+        const speed = (index % 5 + 1) * 10;
+        const x = mouseX * speed;
+        const y = mouseY * speed;
+        particle.style.transform = `translate(${x}px, ${y}px)`;
+    });
 });
 
 // Проверка наличия APK файла
 async function checkApkAvailability() {
-    const apkUrl = 'https://github.com/alag1n/Buzz-Net/releases/latest/download/BuzzNet.apk';
+    const apkUrl = 'https://raw.githubusercontent.com/alag1n/Buzz-Net/main/BuzzNet.apk';
     
     try {
         const response = await fetch(apkUrl, { method: 'HEAD' });
